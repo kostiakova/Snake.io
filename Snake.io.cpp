@@ -1,5 +1,7 @@
 #include <iostream>
 #include <conio.h>
+
+//Edit here the direction of termcolor folder
 #include <D:\Projects\C++\Snake.io\Snake.io\termcolor-master\include\termcolor\termcolor.hpp>
 #include "windows.h"
 
@@ -16,7 +18,7 @@ eDirection dir;
 int fps;
 string spacebar = "          ";
 
-void Initialization() {		//инициализация всего
+void Initialization() {		//ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї ГўГ±ГҐГЈГ®
 	gameOver = false;
 	dir = STOP;
 	x = width / 2;
@@ -27,7 +29,7 @@ void Initialization() {		//инициализация всего
 	fps = 100;
 }
 
-void Draw() {	//отрисовка сцены
+void Draw() {	//Г®ГІГ°ГЁГ±Г®ГўГЄГ  Г±Г¶ГҐГ­Г»
 	system("cls");
 	for (int i = 0; i < width+1; i++) {
 		cout << "#";
@@ -55,7 +57,7 @@ void Draw() {	//отрисовка сцены
 	Sleep(fps);
 }
 
-void Input() {		//считывание нажатий
+void Input() {		//Г±Г·ГЁГІГ»ГўГ Г­ГЁГҐ Г­Г Г¦Г ГІГЁГ©
 	if (_kbhit()) {
 		switch (_getch())
 		{
@@ -74,26 +76,26 @@ void Input() {		//считывание нажатий
 		case 'x':
 			gameOver = true;
 			break;
-/*		case 'ф':
+/*		case 'Гґ':
 			dir = LEFT;
 			break;
-		case 'в':
+		case 'Гў':
 			dir = RIGHT;
 			break;
-		case 'ы':
+		case 'Г»':
 			dir = DOWN;
 			break;
-		case 'ц':
+		case 'Г¶':
 			dir = UP;
 			break;
-		case 'ч':
+		case 'Г·':
 			gameOver = true;
 			break;*/
 		}
 	}
 }
 
-void Logic() {		//описание механик
+void Logic() {		//Г®ГЇГЁГ±Г Г­ГЁГҐ Г¬ГҐГµГ Г­ГЁГЄ
 	switch (dir)
 	{
 	case LEFT:
